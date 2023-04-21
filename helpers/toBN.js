@@ -1,0 +1,1 @@
+export default function toBN(val) { return new web3.utils.BN(val); } 
