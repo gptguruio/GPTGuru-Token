@@ -758,13 +758,10 @@ abstract contract ERC20Pausable is ERC20, Pausable {
     }
 }
 
-
 contract GptGuruToken is ERC20, ERC20Burnable, ERC20Pausable {
 
-    uint256 private initialSupply = 2000000000000000000000000000;
-
     constructor() public ERC20("GPT Guru Token.", "GPTG") {
-        _mint(msg.sender, initialSupply);
+        _mint(msg.sender, 2000000000000000000000000000);
     }
 
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override(ERC20, ERC20Pausable) {
